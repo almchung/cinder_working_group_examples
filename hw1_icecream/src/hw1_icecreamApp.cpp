@@ -1,6 +1,7 @@
 #include "cinder/app/App.h"
 #include "cinder/app/RendererGl.h"
 #include "cinder/gl/gl.h"
+#include "cinder/Rand.h"
 #include "Icecream.h"
 
 using namespace ci;
@@ -19,7 +20,7 @@ class hw1_icecreamApp : public App {
 };
 
 void hw1_icecreamApp::prepareSettings(Settings *settings){
-    settings->setWindowSize(800,1000);
+    settings->setWindowSize(800,1200);
     settings->setFrameRate(20.0f);
 }
 
@@ -38,9 +39,9 @@ void hw1_icecreamApp::update()
 
 void hw1_icecreamApp::draw()
 {
-	gl::clear( Color( 0, 0, 0 ) );
+	gl::clear( Color( CM_HSV, Rand::randFloat(1.0f), 1.0, 0.2 ) );
     cIcecream.draw(vec2(300,450));
-    //cIcecream.drawScoop(vec2(200,400));
+    cIcecream.drawScoop(vec2(200,400));
     cout << "Avgerage FPS: " + to_string(getAverageFps()) + "\n";
 }
 

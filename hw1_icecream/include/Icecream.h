@@ -15,5 +15,8 @@ class Icecream{
     float       fConeSide;
     float       fZitter;
     float       fFlavor;
+    int         numCones;
+    int         iMargin;
+    int         iScoopWidth;
     
 };
