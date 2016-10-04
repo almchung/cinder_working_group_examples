@@ -36,6 +36,6 @@ void Particle::update()
 
 void Particle::draw()
 {
-    gl::color( Color(255, 255, 255));
+    gl::color( Color( CM_HSV, Rand::randFloat(1.0f), 0.4, 1 ) );
     gl::drawSolidCircle(mLoc, mRadius,7);
 }
