@@ -5,8 +5,9 @@
 class Icecream{
  public:
     Icecream();
-    void draw(glm::vec2);
-    void drawScoop(glm::vec2);
+    void draw();
+    void drawScoop();
+    void update();
     
     glm::vec2   vLoc;
     float       fDir;
@@ -18,5 +19,6 @@ class Icecream{
     int         numCones;
     int         iMargin;
     int         iScoopWidth;
-    
+    int         iScoopHeight;
+    int         numScoop;
 };
